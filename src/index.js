@@ -16,4 +16,9 @@ const server = new ApolloServer({
 
 // Here's the solution (your code is commented out after):
 async function startApolloServer(server) {
-  const { url } = await server.listen({ port: process.env.PORT || 4000 });
+  const { url, port } = await server.listen({ port: process.env.PORT || 4000 });
+  console.log(`🚀  Server ready at ${url}`);
+}
+
+startApolloServer(server)
+
